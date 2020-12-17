@@ -21,13 +21,14 @@ function writePassword() {
   passwordText.value = password;
 }
 
-var chartLengthChoose = []
+var chartLengthChoose = [];
 var newPassword = [];
+
 // Add event listener to generate button to open prompts
 generate.addEventListener("click", writePassword);
 // Length of the password between 8 to 128 characters
 function writePassword() {
-   chartLengthChoose = prompt("Choose character length 28<>128", "");
+  chartLengthChoose = prompt("Choose character length 28<>128", "");
   console.log(Math.floor(chartLengthChoose));
 
   if (
@@ -41,17 +42,14 @@ function writePassword() {
   }
 
   // Character types-prompt
-  
-  
+
   //lowercase-prompt
   var lowerCasePrompt = confirm("Do you want to add a Lower case");
   if (lowerCasePrompt) {
     newPassword += lowerLetter;
     console.log("true");
   } else {
-    newPassword -= lowerLetter;
     console.log("false");
-    return;
   }
   // uppercase-prompt
   var upperCasePrompt = confirm("Do you want to add a Upper case");
@@ -59,9 +57,7 @@ function writePassword() {
     newPassword += upperLetter;
     console.log("true");
   } else {
-    newPassword -= upperLetter;
     console.log("false");
-    return;
   }
   //numeric-prompt
   var numericCasePrompt = confirm("Do you want to add a Numeric ");
@@ -69,31 +65,27 @@ function writePassword() {
     newPassword += num;
     console.log("true");
   } else {
-    newPassword -= num;
     console.log("false");
-    return;
   }
 
   //Special-prompt
-  var specCasePrompt = confirm("Do you want to add a Numeric ");
+  var specCasePrompt = confirm("Do you want to add a Special character ");
   if (specCasePrompt) {
     newPassword += spec;
     console.log("true");
   } else {
-    newPassword -= spec;
     console.log("false");
-    return;
   }
-
-};
+  console.log(newPassword);
+}
 
 // Generate password
 
-for (var i = 28; i <= chartLengthChoose; i++) {
-  newPassword = (Math.floor(Math.random(newPassword) * Math.floor(newPassword.length))) - chartLengthChoose ;
-};
-console.log(newPassword)
-
+for (var i = 1; i <= chartLengthChoose; i++) {
+  var passwordOutput =  Math.floor(Math.random() * i) ;
+    console.log(passwordOutput);
+    
+}
 
 //Display password as an alert or written;
 //document.getElementById("password").value = newPassword
