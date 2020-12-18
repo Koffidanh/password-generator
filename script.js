@@ -21,10 +21,10 @@ function writePassword() {
   passwordText.value = password;
 }
 
-var chartLengthChoose = "";
-var newPassword = "";
-var password = "";
-var passwordText = "";
+var chartLengthChoose = [];
+var newPassword = [];
+var password = [];
+var passwordText = [];
 // Add event listener to generate button to open prompts
 generateBtn.addEventListener("click", writePassword);
 // Length of the password between 8 to 128 characters
@@ -91,17 +91,17 @@ function generatePassword() {
   console.log(newPassword);
  
   // Generate password
-  
+      
     for (var i = 1; i <= chartLengthChoose; i++) {
-      password = newPassword.charAt(
-        Math.floor(Math.random() * newPassword.length)
+      password += newPassword.charAt(
+        Math.floor(Math.random() * newPassword.length) 
       );
       console.log(password);
+      
     }
     
     passwordText = password;
 
-  //Display password as an alert or written;
-  document.getElementById("password");
+  
   return;
-}
+};
