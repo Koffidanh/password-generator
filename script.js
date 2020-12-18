@@ -108,11 +108,12 @@ function generatePassword() {
         Math.floor(Math.random() * newPassword.length) 
       );
       console.log(password);
-      
     }
     passwordText.value = password;
     console.log(passwordText.value);
+      // Alert the new password
     alert(" Your Secure Password is " + passwordText.value)
+      // Dispaly the new password in the <textarea/>
     document.getElementById("password").value = passwordText.value
   return;
   
