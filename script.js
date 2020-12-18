@@ -5,8 +5,9 @@ console.log(upperLetter);
   //Lower character
 var lowerLetter = "abcdefghijklmnopqrstuvwxyz";
 console.log(lowerLetter);
-  //Numeric
+  //Numeric character
 var num = "1234567890";
+console.log(num);
   //Special character
 spec = "!@#$%^&*()<>/?|,.:;'";
 console.log(spec);
