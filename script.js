@@ -1,18 +1,18 @@
 //Setting characters
 //Upper character
-var upperLetter = ["A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"];
+var upperLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 console.log(upperLetter);
 //Lower character
-var lowerLetter = ["a	b	c	d	e	f	g	h	i	j	k	l	m	n	o	p	q	r	s	t	u	v	w	x	y	z"];
+var lowerLetter = "abcdefghijklmnopqrstuvwxyz";
 console.log(lowerLetter);
 //Numeric
-var num = ["1 2 3 4 5 6 7 8 9 0"];
+var num = "1234567890";
 //Special character
-spec = ["!@#$%^&*()<>/?|,.:;'"];
+spec = "!@#$%^&*()<>/?|,.:;'";
 console.log(spec);
 
 // Assignment Code
-//var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
@@ -21,23 +21,24 @@ function writePassword() {
   passwordText.value = password;
 }
 
-var chartLengthChoose = [];
-var newPassword = [];
-
+var chartLengthChoose = "";
+var newPassword = "";
+var password = "";
+var passwordText = "";
 // Add event listener to generate button to open prompts
-generate.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);
 // Length of the password between 8 to 128 characters
-function writePassword() {
-  chartLengthChoose = prompt("Choose character length 28<>128", "");
+function generatePassword() {
+  chartLengthChoose = prompt("Choose character length 8<>128", "");
   console.log(Math.floor(chartLengthChoose));
 
   if (
-    Math.floor(chartLengthChoose) >= 28 &&
+    Math.floor(chartLengthChoose) >= 8 &&
     Math.floor(chartLengthChoose) <= 128
   ) {
     confirm("Character length " + chartLengthChoose);
   } else {
-    alert("Not Available");
+    alert("Not Available : " + "Character need to be between 8 <> 128");
     return;
   }
 
@@ -76,16 +77,31 @@ function writePassword() {
   } else {
     console.log("false");
   }
+
+  //At least one character type should be selected
+  if (
+    specCasePrompt === false &&
+    numericCasePrompt === false &&
+    upperCasePrompt === false &&
+    lowerCasePrompt === false
+  ) {
+    alert("At least one character type should be selected");
+    return;
+  }
   console.log(newPassword);
-}
-
-// Generate password
-
-for (var i = 1; i <= chartLengthChoose; i++) {
-  var passwordOutput =  Math.floor(Math.random() * i) ;
-    console.log(passwordOutput);
+ 
+  // Generate password
+  
+    for (var i = 1; i <= chartLengthChoose; i++) {
+      password = newPassword.charAt(
+        Math.floor(Math.random() * newPassword.length)
+      );
+      console.log(password);
+    }
     
-}
+    passwordText = password;
 
-//Display password as an alert or written;
-//document.getElementById("password").value = newPassword
+  //Display password as an alert or written;
+  document.getElementById("password");
+  return;
+}
