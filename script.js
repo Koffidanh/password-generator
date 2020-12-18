@@ -1,13 +1,13 @@
-//Setting characters
-//Upper character
+// Setting characters
+  //Upper character
 var upperLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 console.log(upperLetter);
-//Lower character
+  //Lower character
 var lowerLetter = "abcdefghijklmnopqrstuvwxyz";
 console.log(lowerLetter);
-//Numeric
+  //Numeric
 var num = "1234567890";
-//Special character
+  //Special character
 spec = "!@#$%^&*()<>/?|,.:;'";
 console.log(spec);
 
@@ -21,30 +21,41 @@ function writePassword() {
   passwordText.value = password;
 }
 
+// Setting up variables
+  // Character length choose by user
 var chartLengthChoose = [];
+  // generate new password
 var newPassword = [];
+  // Identify the Id target as a variable
 var password = [];
+  // Identify the Id target children as a variable
 var passwordText = [];
+
 // Add event listener to generate button to open prompts
 generateBtn.addEventListener("click", writePassword);
-// Length of the password between 8 to 128 characters
+
+// Creating a function to generate password through user selections
+  // Length of the password between 8 to 128 characters
 function generatePassword() {
+  // Ask question about the length of character
   chartLengthChoose = prompt("Choose character length 8<>128", "");
   console.log(Math.floor(chartLengthChoose));
-
+  // Setting up a condition for the character length that can be choosed
   if (
     Math.floor(chartLengthChoose) >= 8 &&
     Math.floor(chartLengthChoose) <= 128
   ) {
+      // Confirm the length choosed 8<=>128
     confirm("Character length " + chartLengthChoose);
   } else {
+      // If the choosed length is not in the condition display alert
     alert("Not Available : " + "Character need to be between 8 <> 128");
     return;
   }
 
-  // Character types-prompt
+  // Character types-prompt && creating the possible password
 
-  //lowercase-prompt
+    //lowercase-prompt
   var lowerCasePrompt = confirm("Do you want to add a Lower case");
   if (lowerCasePrompt) {
     newPassword += lowerLetter;
@@ -52,7 +63,7 @@ function generatePassword() {
   } else {
     console.log("false");
   }
-  // uppercase-prompt
+    // uppercase-prompt
   var upperCasePrompt = confirm("Do you want to add a Upper case");
   if (upperCasePrompt) {
     newPassword += upperLetter;
@@ -60,7 +71,7 @@ function generatePassword() {
   } else {
     console.log("false");
   }
-  //numeric-prompt
+    //numeric-prompt
   var numericCasePrompt = confirm("Do you want to add a Numeric ");
   if (numericCasePrompt) {
     newPassword += num;
@@ -68,8 +79,7 @@ function generatePassword() {
   } else {
     console.log("false");
   }
-
-  //Special-prompt
+    //Special-prompt
   var specCasePrompt = confirm("Do you want to add a Special character ");
   if (specCasePrompt) {
     newPassword += spec;
@@ -99,9 +109,10 @@ function generatePassword() {
       console.log(password);
       
     }
-    
-    passwordText = password;
-
-  
+    passwordText.value = password;
+    console.log(passwordText.value);
+    alert(" Your Secure Password is " + passwordText.value)
+    document.getElementById("password").value = passwordText.value
   return;
+  
 };
