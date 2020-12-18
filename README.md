@@ -17,3 +17,11 @@ as Upper letters, Lower letters, Numeric numbers, And Special characters.
 ### Creating couple of variables to store inputs
 * Couple of variables were created to store inputs from User and computed data.
 ![variable](https://github.com/Koffidanh/password-generator/blob/main/Assets/variable.png)
+### Creating fucntion that generated password at the click of the button "Generate Password"
+ This function was created to get input from the user such as the lenght 
+of character needed. And then computing the new password using the criteria set up.
+* the function to generate the new password start as
+![startfunction](https://github.com/Koffidanh/password-generator/blob/main/Assets/startfunction.png)
+* Then condictions were set up to be met by the user. 
+![condictions](https://github.com/Koffidanh/password-generator/blob/main/Assets/condictions1.png)
+![condictions](https://github.com/Koffidanh/password-generator/blob/main/Assets/condictions2.png)

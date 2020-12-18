@@ -36,12 +36,12 @@ var passwordText = [];
 generateBtn.addEventListener("click", writePassword);
 
 // Creating a function to generate password through user selections
-  // Length of the password between 8 to 128 characters
 function generatePassword() {
-  // Ask question about the length of character
+  // Length of the password between 8 to 128 characters
+    // Ask question about the length of character
   chartLengthChoose = prompt("Choose character length 8<>128", "");
   console.log(Math.floor(chartLengthChoose));
-  // Setting up a condition for the character length that can be choosed
+    // Setting up a condition for the character length that can be choosed
   if (
     Math.floor(chartLengthChoose) >= 8 &&
     Math.floor(chartLengthChoose) <= 128
@@ -54,7 +54,7 @@ function generatePassword() {
     return;
   }
 
-  // Character types-prompt && creating the possible password
+    // Character types-prompt && creating the possible password
 
     //lowercase-prompt
   var lowerCasePrompt = confirm("Do you want to add a Lower case");
