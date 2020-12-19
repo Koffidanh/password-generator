@@ -94,7 +94,7 @@ function generatePassword() {
     upperCasePrompt === false &&
     lowerCasePrompt === false
   ) {
-    alert("At least one character type should be selected");
+    alert("Alert: At least one character type should be selected");
     
   }
   console.log(newPassword);
