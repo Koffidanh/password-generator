@@ -22,23 +22,20 @@ function writePassword() {
       passwordText.value = password;
 }
 
-// Setting up variables
-  // Character length choose by user
-  var chartLengthChoose = [];
-  // generate new password
-var newPassword = [];
-  // Identify the Id target as a variable
-var password = [];
-  // Identify the Id target children as a variable
-var passwordText = [];
-
 // Add event listener to generate button to open prompts
 generateBtn.addEventListener("click", writePassword);
 
-
 // Creating a function to generate password through user selections
 function generatePassword() {
-  // Length of the password between 8 to 128 characters
+  // Setting up variables
+   // Character length choose by user
+  var chartLengthChoose = [];
+    // generate new password
+  var newPassword = [];
+   // Identify the Id target as a variable
+  var password = [];
+   // Identify the Id target children as a variable
+     // Length of the password between 8 to 128 characters
     // Ask question about the length of character
   chartLengthChoose = prompt("Choose character length 8<>128", "");
   console.log(Math.floor(chartLengthChoose));
