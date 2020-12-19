@@ -19,12 +19,12 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  passwordText.value = password;
+      passwordText.value = password;
 }
 
 // Setting up variables
   // Character length choose by user
-var chartLengthChoose = [];
+  var chartLengthChoose = [];
   // generate new password
 var newPassword = [];
   // Identify the Id target as a variable
@@ -34,6 +34,7 @@ var passwordText = [];
 
 // Add event listener to generate button to open prompts
 generateBtn.addEventListener("click", writePassword);
+
 
 // Creating a function to generate password through user selections
 function generatePassword() {
@@ -97,7 +98,7 @@ function generatePassword() {
     lowerCasePrompt === false
   ) {
     alert("At least one character type should be selected");
-    return;
+    
   }
   console.log(newPassword);
  
@@ -109,12 +110,6 @@ function generatePassword() {
       );
       console.log(password);
     }
-    passwordText.value = password;
-    console.log(passwordText.value);
-      // Alert the new password
-    alert(" Your Secure Password is " + passwordText.value)
-      // Dispaly the new password in the <textarea/>
-    document.getElementById("password").value = passwordText.value
-  return;
-  
-};
+      return password
+  };
+ 
