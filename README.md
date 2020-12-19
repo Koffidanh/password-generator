@@ -32,3 +32,4 @@ of character needed. And then computing the new password using the criteria set 
 ### The next step was to dispaly the password in the <textarea>.
 * The password is display by using a text input at line 21 in the Javascript.
 ![textarea](https://github.com/Koffidanh/password-generator/blob/main/Assets/textarea.png)
+![textarea1](https://github.com/Koffidanh/password-generator/blob/main/Assets/textarea1.png)
