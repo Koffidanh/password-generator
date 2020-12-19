@@ -34,7 +34,7 @@ function generatePassword() {
   var newPassword = [];
    // Identify the Id target as a variable
   var password = [];
-   // Identify the Id target children as a variable
+   
      // Length of the password between 8 to 128 characters
     // Ask question about the length of character
   chartLengthChoose = prompt("Choose character length 8<>128", "");
