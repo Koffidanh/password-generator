@@ -34,3 +34,13 @@ of character needed. And then computing the new password using the criteria set 
 ![textarea](https://github.com/Koffidanh/password-generator/blob/main/Assets/textarea.png)
 ![textarea1](https://github.com/Koffidanh/password-generator/blob/main/Assets/textarea1.png)
 Password generated with 10 characters while all criteria are true.
+
+### Tools Used
+* Bootstrap
+* JavaScript
+* CSS
+
+### Contact
+* Koffi Danhounsrou
+* email: koffi.danh@gmail.com
+* License by MIT
